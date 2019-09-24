@@ -172,7 +172,7 @@ input {
     padding: 1rem;
     background: rgba(44, 44, 68, 0.6);
     border: none;
-    width: 12;
+    width: 20rem;
     border-radius: 10rem;
     outline: none;
     font-size: 1.5rem;
@@ -252,9 +252,11 @@ footer .blue {
 
 /*MEDIA QUERIES  STARTS*/
 @media screen and (min-width: 48rem) {
-    .navbar .blue {
-        display: none;
+    input {
         width: 15rem;
+    }
+    i {
+        left: 13rem;
     }
 }
 
