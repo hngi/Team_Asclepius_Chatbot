@@ -82,7 +82,6 @@ header ul li a {
 }
 
 #container {
-    margin: 15rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -228,7 +227,7 @@ input {
 /*This class is added by javascript 
 when the password reaches the user icons*/
 .fadeOff {
-    color: rgba(255, 239, 239, 0.6);
+    background: rgba(44, 44, 68, 0.6);
 }
 
 /*footer starts*/
@@ -298,10 +297,11 @@ footer .blue {
 }
 
 @media screen and (max-width: 500px) {
-    .navbar {
+    .navbar,
+    .navbar h1 {
         font-size: 1rem;
     }
-    .inner-container.grid {
+    .header .inner-container.grid {
         display: grid;
         grid-template-areas:
             "image"
