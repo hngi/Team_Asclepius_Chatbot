@@ -28,8 +28,7 @@ img {
 
 /*Header Ends*/
 #container {
-    margin: 5rem;
-    padding: 5;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
