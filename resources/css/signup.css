@@ -1,0 +1,343 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Dosis", sans-serif;
+    background: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden !important;
+    overflow-y: scroll !important;
+}
+img {
+    height: 30rem;
+}
+
+.logo {
+    float: left;
+    display: block;
+    font-size: 2em;
+    padding: 10px 20px;
+    height: 4rem;
+    cursor: pointer;
+}
+
+/*Header Starts*/
+.header {
+    box-shadow: 0px 4px 2px -0.005 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+#blue {
+    color: #009da4;
+}
+li {
+    list-style: none;
+}
+
+/*NavBar*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    z-index: 1;
+    width: 100%;
+    top: 4rem;
+    opacity: 0.9;
+    font-size: 2rem;
+}
+
+.navbar a {
+    color: #0a0a0a;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+header ul li {
+    background: #009da4;
+    box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
+    border-radius: 40px;
+    color: #ffffff !important;
+    width: 15rem;
+    text-align: center;
+}
+header ul li a {
+    color: #ffffff !important;
+}
+
+#container {
+    margin: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+/*GRIDS START*/
+.inner-container.grid {
+    display: grid;
+    grid-template-areas: "image form";
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-areas:
+        "lead lead"
+        "grid1 grid2"
+        "btn btn"
+        "prompt prompt";
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+.lead {
+    grid-area: lead;
+    color: #009da4;
+}
+.grid1 {
+    grid-area: grid1;
+}
+.grid2 {
+    grid-area: grid2;
+}
+.signup {
+    grid-area: btn;
+}
+#prompt {
+    grid-area: prompt;
+}
+
+/*GRIDS END*/
+
+/*FORM*/
+.form-grid label,
+.signup label {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin: 0;
+    top: 0px;
+}
+.form-grid label:first-child {
+    margin-bottom: 0.5rem;
+}
+i,
+.signup label i {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 18rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    padding-right: 1.5rem;
+    z-index: -1;
+    transition: all 0.7s ease-out;
+    margin-bottom: 0.3rem;
+}
+.signup label i {
+    z-index: 1;
+    color: #ffffff;
+    font-size: 1.5rem;
+    left: 13rem;
+}
+input {
+    padding: 1rem;
+    background: rgba(44, 44, 68, 0.6);
+    border: none;
+    border-radius: 10rem;
+    outline: none;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0rem 4rem 2rem -0.005 rgba(0, 0, 0, 0.2);
+}
+::placeholder {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#signup {
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    width: 20rem;
+    padding: 1rem;
+    color: white;
+    background-color: hsl(183, 100%, 32%);
+    font-size: 1.5rem;
+    font-family: open sans;
+    box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
+}
+
+#signup:hover {
+    cursor: pointer;
+    border: 2px solid rgba(255, 239, 239, 0.6);
+}
+
+#prompt {
+    text-align: center;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #a79e9e;
+}
+
+.flex-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#prompt a {
+    text-decoration: none;
+    color: #009da4;
+}
+
+#prompt a:hover {
+    text-decoration: underline;
+}
+/*This class is added by javascript 
+when the password reaches the user icons*/
+.fadeOff {
+    color: rgba(255, 239, 239, 0.6);
+}
+
+/*footer starts*/
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 1000;
+}
+
+footer .blue {
+    color: #009da4;
+}
+/*footer ends*/
+
+/*MEDIA QUERIES  STARTS*/
+@media screen and (min-width: 48rem) {
+    .navbar .blue {
+        display: none;
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        font-size: 0.9rem;
+        margin: auto;
+        margin-bottom: -15rem;
+    }
+    .navbar .blue {
+        padding: 3rem;
+        text-align: centers;
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-areas:
+            "lead"
+            "grid1"
+            "grid2"
+            "btn"
+            "prompt";
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    img {
+        height: 18rem;
+    }
+    .lead {
+        grid-area: lead;
+    }
+    .grid1 {
+        grid-area: grid1;
+    }
+    .grid2 {
+        grid-area: grid2;
+    }
+    .signup {
+        grid-area: btn;
+    }
+    #prompt {
+        grid-area: prompt;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        font-size: 1rem;
+    }
+    .inner-container.grid {
+        display: grid;
+        grid-template-areas:
+            "image"
+            "form";
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-areas:
+            "lead"
+            "grid1"
+            "grid2"
+            "btn"
+            "prompt";
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        overflow-x: hidden !important;
+    }
+    img {
+        height: 20rem;
+    }
+    .lead {
+        grid-area: lead;
+    }
+    .grid1 {
+        grid-area: grid1;
+    }
+    .grid2 {
+        grid-area: grid2;
+    }
+    .signup {
+        grid-area: btn;
+    }
+    #prompt {
+        grid-area: prompt;
+    }
+}
+/*MEDIA QUERIES  ENDS*/
