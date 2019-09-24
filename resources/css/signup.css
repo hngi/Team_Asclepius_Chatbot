@@ -87,6 +87,7 @@ header ul li a {
     justify-content: center;
     align-content: center;
     align-items: center;
+    padding: 10rem !important;
 }
 
 /*GRIDS START*/
@@ -169,6 +170,7 @@ input {
     padding: 1rem;
     background: rgba(44, 44, 68, 0.6);
     border: none;
+    width: 12;
     border-radius: 10rem;
     outline: none;
     font-size: 1.5rem;
@@ -266,7 +268,7 @@ footer .blue {
     }
     #container {
         margin: auto;
-        margin-top: 15rem;
+        margin-top: 10rem;
         overflow-x: hidden !important;
     }
     header ul li {
@@ -283,9 +285,11 @@ footer .blue {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
-    img {
-        height: 17rem;
+
+    .form-img-wrapper img {
+        height: 10rem;
     }
+
     .lead {
         grid-area: lead;
     }
@@ -311,9 +315,7 @@ footer .blue {
     header ul li {
         width: 6rem;
     }
-    #container {
-        margin-top: 15rem;
-    }
+
     .inner-container.grid {
         display: grid;
         grid-template-areas:
