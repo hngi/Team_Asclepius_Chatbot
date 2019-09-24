@@ -264,7 +264,14 @@ footer .blue {
         padding: 3rem;
         text-align: centers;
     }
-
+    #container {
+        margin: auto;
+        margin-top: 15rem;
+        overflow-x: hidden !important;
+    }
+    header ul li {
+        width: 5rem;
+    }
     .form-grid {
         display: grid;
         grid-template-areas:
@@ -277,7 +284,7 @@ footer .blue {
         gap: 1rem;
     }
     img {
-        height: 18rem;
+        height: 17rem;
     }
     .lead {
         grid-area: lead;
@@ -301,12 +308,24 @@ footer .blue {
     .navbar h1 {
         font-size: 1rem;
     }
-    .header .inner-container.grid {
+    header ul li {
+        width: 6rem;
+    }
+    #container {
+        margin-top: 15rem;
+    }
+    .inner-container.grid {
         display: grid;
         grid-template-areas:
             "image"
             "form";
         grid-template-columns: repeat(1, 1fr);
+    }
+    #image-wrapper {
+        grid-area: image;
+    }
+    .form-wrapper {
+        grid-area: form;
     }
 
     .form-grid {
