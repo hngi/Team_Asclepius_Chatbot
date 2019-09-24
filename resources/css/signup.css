@@ -88,6 +88,8 @@ header ul li a {
     align-content: center;
     align-items: center;
     padding: 10rem !important;
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
 }
 
 /*GRIDS START*/
@@ -315,7 +317,9 @@ footer .blue {
     header ul li {
         width: 6rem;
     }
-
+    .form-img-wrapper img {
+        height: 20rem;
+    }
     .inner-container.grid {
         display: grid;
         grid-template-areas:
