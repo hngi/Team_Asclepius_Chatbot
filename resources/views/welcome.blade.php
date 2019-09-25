@@ -22,11 +22,14 @@
     </body>
   
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/assets/css/chat.min.css">
+    <a href="#" class="btn" onclick="botmanChatWidget.open();return false;">Try out</a>
     <script>
 	    var botmanWidget = {
 	        aboutText: 'Team Asclepius by Kizito',
                 title: 'Asclepius Bot',
-	        introMessage: "✋ Hi! I'm form Asclepius Team, How Can I help You"
+	        introMessage: "✋ Hi! I'm form Asclepius Team, How Can I help You",
+            desktopWidth: 1000,
+            desktopHeight: 500,
 	    };
     </script>
   

@@ -14,15 +14,13 @@ class ChatBotController extends Controller {
     public function handle() {
         $botman = app('botman');
 
-        $botman->hears('{message}', function($botman, $message) {
-
-            if ($message == 'hi') {
-                $this->askName($botman);
-            }
+        $botman->hears('hi|hello|hey',function($bot)
+        {
+            $this->askName($bot);
         });
         //this will use swtich case , for now is for testing
         $botman->hears('What Your Name ?', function ($bot) {
-            $bot->reply('My Name is Team Asclepius');
+            $bot->reply('My Name is Asclepius bot');
         });
         $botman->hears('Ok', function ($bot) {
             $bot->reply('You are Welcome');
@@ -30,6 +28,15 @@ class ChatBotController extends Controller {
 
         $botman->hears('Why Am I Here', function ($bot) {
             $bot->reply('You are here because of HNG 6.0 Internship');
+        });
+        $botman->hears('.*(hng.* internship).*',function($bot) //using regular expressions
+        {
+            $bot->reply("hng internship is a place to learn");
+        });
+        $botman->fallback(function($bot)
+        {
+            $bot->reply("sorry I do not understand you would you mind rephrasing");
+
         });
 
 

@@ -30,6 +30,6 @@ Route::post('/signup','userController@postSignup');
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('auth');
+});
     
 Route::match(['get', 'post'], '/botman', 'Chatbot\ChatBotController@handle');
