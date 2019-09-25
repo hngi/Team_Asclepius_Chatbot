@@ -20,3 +20,5 @@ input.forEach(element => {
     let currentInputField = element
     fadeOffIcons(currentInputField);
 });
+
+window.onload = ()=>{botmanChatWidget.open(); return false;}
