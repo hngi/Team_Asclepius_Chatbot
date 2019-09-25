@@ -27,7 +27,7 @@
 	    var botmanWidget = {
 	        aboutText: 'Team Asclepius by Kizito',
                 title: 'Asclepius Bot',
-	        introMessage: "✋ Hi! I'm form Asclepius Team, How Can I help You",
+	        introMessage: "✋ Hi! I'm from Team Asclepius",
             desktopWidth: 1000,
             desktopHeight: 500,
 	    };

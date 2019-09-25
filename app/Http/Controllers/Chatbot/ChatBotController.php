@@ -22,10 +22,17 @@ class ChatBotController extends Controller {
         $botman->hears('What Your Name ?', function ($bot) {
             $bot->reply('My Name is Asclepius bot');
         });
-        $botman->hears('Ok', function ($bot) {
-            $bot->reply('You are Welcome');
+
+        $botman->hears('.*team asclepius.*',function($bot)
+        {
+            $bot->reply('Team Asclepius is one of the teams in stage 3 of HNG Internship 6.0');
         });
 
+        $botman->hears('Ok', function ($bot) {
+            $bot->reply('Glad I could be of help');
+        });
+
+        
         $botman->hears('Why Am I Here', function ($bot) {
             $bot->reply('You are here because of HNG 6.0 Internship');
         });
@@ -33,6 +40,7 @@ class ChatBotController extends Controller {
         {
             $bot->reply("hng internship is a place to learn");
         });
+
         $botman->fallback(function($bot)
         {
             $bot->reply("sorry I do not understand you would you mind rephrasing");
