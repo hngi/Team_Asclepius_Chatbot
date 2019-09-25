@@ -87,8 +87,8 @@ header ul li a {
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding-top: 5rem !important;
-    padding-bottom: 5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 3rem !important;
 }
 
 /*GRIDS START*/
@@ -263,7 +263,7 @@ footer .blue {
     .navbar {
         font-size: 0.9rem;
         margin: auto;
-        margin-bottom: -15rem;
+        margin-bottom: 0;
     }
     .navbar .blue {
         padding: 3rem;
@@ -271,7 +271,7 @@ footer .blue {
     }
     #container {
         margin: auto;
-        margin-top: 6rem;
+
         overflow-x: hidden !important;
     }
     header ul li {
