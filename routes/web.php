@@ -11,8 +11,25 @@
 |
 */
 
+
+Route::get('/login',[
+
+	'as'=>'login',
+	'uses'=>'userController@showLogin'
+
+]);
+Route::get('/signup',[
+
+	'as'=>'signup',
+	'uses'=>'userController@showSignup'
+
+]);
+
+Route::post('/login','userController@postLogin');
+Route::post('/signup','userController@postSignup'); 
+
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('auth');
     
 Route::match(['get', 'post'], '/botman', 'Chatbot\ChatBotController@handle');
