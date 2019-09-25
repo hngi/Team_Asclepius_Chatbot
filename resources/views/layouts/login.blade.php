@@ -20,7 +20,6 @@
             .toast {
                 opacity: 0.9!important;
             }
-       
         </style>
     </head>
 
@@ -40,6 +39,50 @@
             <script src="{{ asset('js/main.js') }}" defer></script>
 
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-            @yield('extra')
+            
+            <script>
+/*
+ login
+ */
+$('#login').submit(function (event) {
+    event.preventDefault();
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        beforeSend: function () {
+            $(".modal").show();
+        },
+        complete: function () {
+            $(".modal").hide();
+        }
+    });
+    jQuery.ajax({
+        url: "{{url('user/login')}}",
+        type: 'POST',
+        data: {
+            username: jQuery('#username').val(),
+            password: jQuery('#password').val()
+        },
+        success: function (data) {
+            if (data.status === 401) {
+                var message = data.message;
+                toastr.error(message, {timeOut: 50000});
+                return false;
+            }
+            if (data.status === 200) {
+                var message = data.message;
+                toastr.options.onHidden = function () {
+                    window.location.href = "{{url('/home')}}";
+                };
+                toastr.success(message, {timeOut: 50000});
+                return false;
+            }
+        }
+
+    });
+});
+            </script> 
+             @yield('extra')
     </body>
 </html>
