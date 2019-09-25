@@ -17,13 +17,61 @@ img {
 }
 
 /*Header Starts*/
+
+/*Header Starts*/
 .header {
     box-shadow: 0px 4px 2px -0.005 rgba(0, 0, 0, 0.2);
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 1;
-    border-bottom: 0.1rem solid #009da4;
     top: 0;
+}
+
+#blue {
+    color: #009da4;
+}
+li {
+    list-style: none;
+}
+
+/*NavBar*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    z-index: 1;
+    width: 100%;
+    top: 4rem;
+    opacity: 0.9;
+    font-size: 2rem;
+}
+
+.navbar a {
+    color: #0a0a0a;
+    padding: 0.45rem;
+    margin: 0 0.25rem;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #0a0a0a;
+}
+
+header ul li {
+    background: #009da4;
+    box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
+    border-radius: 40px;
+    color: #ffffff !important;
+    width: 15rem;
+    text-align: center;
+}
+header ul li a {
+    color: #ffffff !important;
 }
 
 /*Header Ends*/
