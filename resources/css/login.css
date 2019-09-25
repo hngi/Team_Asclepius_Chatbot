@@ -225,7 +225,7 @@ when the password reaches the user icons*/
 
 /*footer starts*/
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     display: flex;
     flex-direction: row;
