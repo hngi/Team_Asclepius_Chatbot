@@ -16,10 +16,13 @@ class ChatBotController extends Controller {
     public function handle() {
         $botman = app('botman');
 
-      /*  $botman->hears('hi|hello|hey',function($bot)
+        $botman->hears('hi|hello|hey',function($bot)
         {
-            $this->askName($bot);
-        });*/
+            $reply="nice to hear from you, I was created by team asclepius
+                     you can ask me any question I am only a simple
+                      bot so don't make it hard";
+            $bot->reply($reply);
+        });
 
         $botman->hears('.*team asclepius.*',function($bot)
         {
@@ -41,6 +44,7 @@ class ChatBotController extends Controller {
             $bot->reply(" you can make it to the final stages of the internship");
             $bot->reply(" you can also win great things along the way.");
         });
+
 
         $botman->hears('{message}', function($botman, $message) {
 
@@ -72,16 +76,10 @@ class ChatBotController extends Controller {
             elseif ($message == 'What is my age?') {
                 $this->sayAge($botman);
             } 
-            
-            
-            
-            
-            
             else {
                 $this->fallBack($botman);
             }
         });
-
 
         $botman->listen();
     }
@@ -153,7 +151,7 @@ class ChatBotController extends Controller {
     
     public function fallBack($botman) {
         $botman->types();
-        $botman->say('Sorry, My Boss didnt taught me this.', function($botman) {
+        $botman->say('Sorry, My Boss didnt teach me this.', function($botman) {
             
         });
     }

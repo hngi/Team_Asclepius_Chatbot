@@ -28,8 +28,6 @@
 	        aboutText: 'Team Asclepius by Kizito',
                 title: 'Asclepius Bot',
 	        introMessage: "✋ Hi! I'm from Team Asclepius",
-            desktopWidth: 1000,
-            desktopHeight: 500,
 	    };
     </script>
   
