@@ -1,10 +1,16 @@
 @extends('layouts.login')
 
+@if (Auth::check())
+    <script type="text/javascript">
+    window.location = "{{ url('/home') }}";//here double curly bracket
+    </script>
+@endif
+
 @section('content')
+
         <div class="inner-container grid">
             <div class="form-img-wrapper">
-                <img src=" https://res.cloudinary.com/hng-pre-internship/image/upload/v1569329467/chatbot/opinionbg_ylkxa8.png
-    " alt="">
+                <img src=" https://res.cloudinary.com/hng-pre-internship/image/upload/v1569329467/chatbot/opinionbg_ylkxa8.png" alt="">
             </div>
 
             <div class="form-wrapper">
@@ -42,3 +48,4 @@
         </div>
     </div>
 @endsection
+

@@ -14,7 +14,7 @@ class Users extends Migration
     public function up()
     {
         //making the table schema
-        Schema::create('users',function(Blueprint $table)
+        Schema::create('userstrial',function(Blueprint $table)
         {
             $table->increments('id');
             $table->string('fullname');

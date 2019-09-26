@@ -1,5 +1,6 @@
 @extends('layouts.signup')
 
+
 @section('content')
   <div class="inner-container grid">
             <div class="form-img-wrapper" id="image-wrapper">
@@ -71,5 +72,6 @@
                     <p>Have an account?<a class="forgot" href="{{route('login')}}">Login</a></p>
                 </div>
             </div>
-        </div>
+
 @endsection
+
