@@ -16,6 +16,38 @@ img {
     height: 30rem;
 }
 
+.modal
+    {
+        position: fixed;
+        z-index: 999;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: Black;
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+        -moz-opacity: 0.8;
+    }
+    .center
+    {
+        z-index: 1000;
+        margin: 300px auto;
+        padding: 10px;
+        width: 130px;
+        background-color: White;
+        border-radius: 10px;
+        filter: alpha(opacity=100);
+        opacity: 1;
+        -moz-opacity: 1;
+    }
+    .center img
+    {
+        height: 100px;
+        width: 100px;
+    }
+	
+	
 .logo {
     float: left;
     display: block;
@@ -183,7 +215,7 @@ input {
     color: #ffffff;
 }
 
-#signup {
+.designbtn {
     border: none;
     outline: none;
     border-radius: 10rem;
@@ -196,7 +228,7 @@ input {
     box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
 }
 
-#signup:hover {
+.designbtn:hover {
     cursor: pointer;
     border: 2px solid rgba(255, 239, 239, 0.6);
 }
