@@ -1,5 +1,11 @@
 @extends('layouts.login')
 
+@if (Auth::check())
+    <script type="text/javascript">
+    window.location = "{{ url('/home') }}";//here double curly bracket
+    </script>
+@endif
+
 @section('content')
 
         <div class="inner-container grid">

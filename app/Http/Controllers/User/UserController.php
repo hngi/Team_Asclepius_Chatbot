@@ -59,6 +59,7 @@ class UserController extends Controller {
     public function login(Request $request) {
 
         if (Auth::attempt(['username' => request('username'), 'password' => request('password')])) {
+            
             $user = Auth::user();
             return ([
                 'status' => $this->successStatus,
