@@ -49,7 +49,8 @@ class UserController extends Controller {
             return $error;
         }
         $input['password'] = Hash::make($input['password']);
-        User::create($input);
+        $user = User::create($input);
+        Auth::login($user);
         return ([
             'status' => $this->successStatus,
             'message' => 'Registration was Successful',
