@@ -21,4 +21,3 @@ Route::post('user/login', 'User\UserController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/kelvin',function(){return "you are nothing";});
