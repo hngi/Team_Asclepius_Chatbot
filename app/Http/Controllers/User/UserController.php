@@ -9,6 +9,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+
 class UserController extends Controller {
 
     use RegistersUsers,
@@ -49,7 +50,8 @@ class UserController extends Controller {
             return $error;
         }
         $input['password'] = Hash::make($input['password']);
-        User::create($input);
+        $user = User::create($input);
+        Auth::login($user);
         return ([
             'status' => $this->successStatus,
             'message' => 'Registration was Successful',

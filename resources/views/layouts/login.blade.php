@@ -67,7 +67,7 @@ $('#login').submit(function (event) {
         success: function (data) {
             if (data.status === 401) {
                 var message = data.message;
-                toastr.error(message, {timeOut: 50000});
+                toastr.error(message, {timeOut: 100});
                 return false;
             }
             if (data.status === 200) {
@@ -75,7 +75,7 @@ $('#login').submit(function (event) {
                 toastr.options.onHidden = function () {
                     window.location.href = "{{url('/home')}}";
                 };
-                toastr.success(message, {timeOut: 50000});
+                toastr.success(message, {timeOut: 100});
                 return false;
             }
         }
