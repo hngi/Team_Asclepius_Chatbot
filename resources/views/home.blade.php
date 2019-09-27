@@ -1,5 +1,7 @@
 @extends('layouts.login')
 
+@section('title','Chatbot User Homepage')
+
 @section('content')
         <div class="inner-container grid">
             <div class="form-img-wrapper">
