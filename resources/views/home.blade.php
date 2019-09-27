@@ -45,7 +45,6 @@
 	        aboutText: 'Team Asclepius by Kizito',
                 title: 'Asclepius Bot',
 	        introMessage: "✋ Hi! {{Auth::user()->username}}"
-                
 	    };
     </script>
   

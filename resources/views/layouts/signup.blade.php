@@ -15,7 +15,7 @@
         <!-- Scripts -->
 
         <!-- Styles -->
-        <link href="{{ asset('css/signup.css') }}" rel="stylesheet">
+        <link href="/css/signup.css" rel="stylesheet">
         <style>
             .toast {
                 opacity: 0.9!important;
@@ -53,8 +53,8 @@
 
             <footer>&copy2019 <span class="blue">Team Asclepius.</span>  All Rights Reserved.</footer>
             </            div>   
-            <script src="{{ asset('js/jQuery.js') }}"></script>
-            <script src="{{ asset('js/main.js') }}" defer></script>
+            <script src="/js/jQuery.js"></script>
+            <script src="/js/main.js" defer></script>
 
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
             <script>

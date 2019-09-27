@@ -10,10 +10,41 @@ use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Drivers\DriverManager;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+
 class ChatBotController extends Controller {
 
     public function handle() {
         $botman = app('botman');
+
+        $botman->hears('hi|hello|hey',function($bot)
+        {
+            $reply="nice to hear from you, I was created by team asclepius
+                     you can ask me any question I am only a simple
+                      bot so don't make it hard";
+            $bot->reply($reply);
+        });
+
+        $botman->hears('.*team asclepius.*',function($bot)
+        {
+            $bot->reply('Team Asclepius is one of the teams in stage 3 of HNG Internship 6.0');
+        });
+
+        $botman->hears('Ok', function ($bot) {
+            $bot->reply('Glad I could be of help');
+        });
+
+        
+        $botman->hears('Why Am I Here', function ($bot) {
+            $bot->reply('You are here because of HNG 6.0 Internship');
+        });
+        $botman->hears('.*(hng.* internship).*',function($bot) //using regular expressions
+        {
+            $bot->reply("hng internship is a place to learn, meet new friends");
+            $bot->reply(" if you are lucky enough and are skilled enough, you can make");
+            $bot->reply(" you can make it to the final stages of the internship");
+            $bot->reply(" you can also win great things along the way.");
+        });
+
 
         $botman->hears('{message}', function($botman, $message) {
 
@@ -45,17 +76,10 @@ class ChatBotController extends Controller {
             elseif ($message == 'What is my age?') {
                 $this->sayAge($botman);
             } 
-            
-            
-            
-            
-            
             else {
                 $this->fallBack($botman);
             }
         });
-
-
 
         $botman->listen();
     }
@@ -72,7 +96,7 @@ class ChatBotController extends Controller {
 
     public function sayName($botman) {
         $botman->types();
-        $botman->say('My Name is Asclepius', function($botman) {
+        $botman->say('My Name is Asclepiusbot', function($botman) {
             
         });
     }
@@ -127,7 +151,7 @@ class ChatBotController extends Controller {
     
     public function fallBack($botman) {
         $botman->types();
-        $botman->say('Sorry, My Boss didnt taught me this.', function($botman) {
+        $botman->say('Sorry, My Boss didnt teach me this.', function($botman) {
             
         });
     }
