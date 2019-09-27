@@ -90,7 +90,7 @@ $('#register').submit(function (event) {
             if (data.status === 401) {
                 jQuery.each(data.message, function (key, value) {
                     var message = ('' + value + '');
-                    toastr.error(message, {timeOut: 50000});
+                    toastr.error(message, {timeOut: 100});
                 });
                 return false;
             }
@@ -99,7 +99,7 @@ $('#register').submit(function (event) {
                 toastr.options.onHidden = function () {
                     window.location.href = "{{url('/home')}}";
                 };
-                toastr.success(message, {timeOut: 50000});
+                toastr.success(message, {timeOut: 100});
                 return false;
             }
         }
