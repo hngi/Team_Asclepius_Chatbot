@@ -15,80 +15,58 @@ body {
 img {
     height: 30rem;
 }
-
-.logo {
-    float: left;
-    display: block;
-    font-size: 2em;
-    padding: 10px 20px;
-    height: 4rem;
-    cursor: pointer;
-}
+.modal
+    {
+        position: fixed;
+        z-index: 999;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: Black;
+        filter: alpha(opacity=60);
+        opacity: 0.6;
+        -moz-opacity: 0.8;
+    }
+    .center
+    {
+        z-index: 1000;
+        margin: 300px auto;
+        padding: 10px;
+        width: 130px;
+        background-color: White;
+        border-radius: 10px;
+        filter: alpha(opacity=100);
+        opacity: 1;
+        -moz-opacity: 1;
+    }
+    .center img
+    {
+        height: 100px;
+        width: 100px;
+    }
+	
+	
 
 /*Header Starts*/
 .header {
     box-shadow: 0px 4px 2px -0.005 rgba(0, 0, 0, 0.2);
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 1;
+    border-bottom: 0.1rem solid #009da4;
     top: 0;
 }
 
-#blue {
-    color: #009da4;
-}
-li {
-    list-style: none;
-}
-
-/*NavBar*/
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.7rem 2rem;
-    z-index: 1;
-    width: 100%;
-    top: 4rem;
-    opacity: 0.9;
-    font-size: 2rem;
-}
-
-.navbar a {
-    color: #0a0a0a;
-    padding: 0.45rem;
-    margin: 0 0.25rem;
-}
-
-.navbar ul {
-    display: flex;
-}
-
-a {
-    text-decoration: none;
-    color: #0a0a0a;
-}
-
-header ul li {
-    background: #009da4;
-    box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
-    border-radius: 40px;
-    color: #ffffff !important;
-    width: 15rem;
-    text-align: center;
-}
-header ul li a {
-    color: #ffffff !important;
-}
-
+/*Header Ends*/
 #container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
-    padding-top: 2rem !important;
-    padding-bottom: 3rem !important;
+    overflow-x: hidden !important;
+    width: 100vw;
 }
 
 /*GRIDS START*/
@@ -104,42 +82,36 @@ header ul li a {
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
 }
 
 .form-grid {
     display: grid;
     grid-template-areas:
-        "lead lead"
-        "grid1 grid2"
-        "btn btn"
-        "prompt prompt";
-    grid-template-columns: repeat(2, 1fr);
+        "lead"
+        "grid1"
+        "btn"
+        "prompt";
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
 }
 .lead {
     grid-area: lead;
-    color: #009da4;
 }
 .grid1 {
     grid-area: grid1;
 }
-.grid2 {
-    grid-area: grid2;
-}
-.signup {
+
+.login {
     grid-area: btn;
 }
 #prompt {
     grid-area: prompt;
 }
-
 /*GRIDS END*/
 
 /*FORM*/
 .form-grid label,
-.signup label {
+.login label {
     position: relative;
     display: block;
     padding: 0;
@@ -150,7 +122,7 @@ header ul li a {
     margin-bottom: 0.5rem;
 }
 i,
-.signup label i {
+.login label i {
     position: absolute;
     bottom: 1.8rem;
     left: 18rem;
@@ -161,7 +133,7 @@ i,
     transition: all 0.7s ease-out;
     margin-bottom: 0.3rem;
 }
-.signup label i {
+.login label i {
     z-index: 1;
     color: #ffffff;
     font-size: 1.5rem;
@@ -171,34 +143,36 @@ input {
     padding: 1rem;
     background: rgba(44, 44, 68, 0.6);
     border: none;
-    width: 20rem;
     border-radius: 10rem;
     outline: none;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     box-shadow: 0rem 4rem 2rem -0.005 rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 ::placeholder {
     font-size: 1rem;
     color: #ffffff;
 }
 
-#signup {
+.logindesign {
     border: none;
     outline: none;
     border-radius: 10rem;
     width: 20rem;
     padding: 1rem;
     color: white;
-    background-color: hsl(183, 100%, 32%);
+    background-color: #63dce2;
     font-size: 1.5rem;
     font-family: open sans;
-    box-shadow: 0px 4px 10px rgba(231, 116, 116, 0.55);
 }
 
-#signup:hover {
+.logindesign:hover {
     cursor: pointer;
     border: 2px solid rgba(255, 239, 239, 0.6);
+}
+.loginActive {
+    background-color: #009da4;
 }
 
 #prompt {
@@ -251,32 +225,9 @@ footer .blue {
 
 /*MEDIA QUERIES  STARTS*/
 @media screen and (min-width: 48rem) {
-    input {
-        width: 15rem;
-    }
-    i {
-        left: 13rem;
-    }
 }
 
 @media screen and (max-width: 768px) {
-    .navbar {
-        font-size: 0.9rem;
-        margin: auto;
-        margin-bottom: 0;
-    }
-    .navbar .blue {
-        padding: 3rem;
-        text-align: centers;
-    }
-    #container {
-        margin: auto;
-
-        overflow-x: hidden !important;
-    }
-    header ul li {
-        width: 5rem;
-    }
     .form-grid {
         display: grid;
         grid-template-areas:
@@ -288,11 +239,6 @@ footer .blue {
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
     }
-
-    .form-img-wrapper img {
-        height: 10rem;
-    }
-
     .lead {
         grid-area: lead;
     }
@@ -302,7 +248,7 @@ footer .blue {
     .grid2 {
         grid-area: grid2;
     }
-    .signup {
+    .login {
         grid-area: btn;
     }
     #prompt {
@@ -311,28 +257,17 @@ footer .blue {
 }
 
 @media screen and (max-width: 500px) {
-    .navbar,
-    .navbar h1 {
-        font-size: 1rem;
-    }
-    header ul li {
-        width: 6rem;
-    }
-    .form-img-wrapper img {
-        height: 20rem;
-    }
     .inner-container.grid {
         display: grid;
         grid-template-areas:
             "image"
             "form";
         grid-template-columns: repeat(1, 1fr);
+        overflow-x: hidden !important;
     }
-    #image-wrapper {
-        grid-area: image;
-    }
-    .form-wrapper {
-        grid-area: form;
+
+    .form-img-wrapper img {
+        height: 20rem;
     }
 
     .form-grid {
@@ -347,9 +282,6 @@ footer .blue {
         gap: 1rem;
         overflow-x: hidden !important;
     }
-    img {
-        height: 20rem;
-    }
     .lead {
         grid-area: lead;
     }
@@ -359,7 +291,7 @@ footer .blue {
     .grid2 {
         grid-area: grid2;
     }
-    .signup {
+    .login {
         grid-area: btn;
     }
     #prompt {
