@@ -11,7 +11,10 @@
             " alt="">
             </div>
 
-             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+            <div class="form-wrapper">
+                 
+             <div class="" aria-labelledby="navbarDropdown">
                 <a class="logoutdesign" href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
@@ -22,9 +25,7 @@
                     @csrf
                 </form>
              </div>
-
-            <div class="form-wrapper">
-                 
+                <br/>
                 <h1 class="lead">Hi {{Auth::user()->username}}</h1>
                <br/>
                     <div class="flex-btn">
