@@ -1,25 +1,30 @@
 @extends('layouts.login')
 
+@section('title','Chatbot User Homepage')
+
 @section('content')
+
         <div class="inner-container grid">
+            
             <div class="form-img-wrapper">
                 <img src=" https://res.cloudinary.com/hng-pre-internship/image/upload/v1569329467/chatbot/opinionbg_ylkxa8.png
-    " alt="">
+            " alt="">
             </div>
 
-            <div class="form-wrapper">
-                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="logindesign" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="logoutdesign" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                <br/> <br/>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+             </div>
+
+            <div class="form-wrapper">
+                 
                 <h1 class="lead">Hi {{Auth::user()->username}}</h1>
                <br/>
                     <div class="flex-btn">

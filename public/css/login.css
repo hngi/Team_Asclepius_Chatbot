@@ -155,6 +155,27 @@ input {
     color: #ffffff;
 }
 
+.logoutdesign
+{
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    width: 20rem;
+    padding: 1rem;
+    color: green;
+    background-color: tomato;
+    font-size: 1.5rem;
+    font-family: open sans;
+}
+
+.logoutdesign:hover
+{
+    cursor: pointer;
+    border: 2px solid rgba(255, 239, 239, 0.6);
+    background-color: red;
+    color: rgb(214,214,214);
+}
+
 .logindesign {
     border: none;
     outline: none;
