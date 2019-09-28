@@ -96,10 +96,9 @@ $('#register').submit(function (event) {
             }
             if (data.status === 200) {
                 var message = data.message;
-                toastr.options.onHidden = function () {
-                    window.location.href = "{{url('/home')}}";
-                };
-                toastr.success(message, {timeOut: 100});
+               
+                toastr.success(message);
+                  window.location.href = "{{url('/home')}}";
                 return false;
             }
         }
