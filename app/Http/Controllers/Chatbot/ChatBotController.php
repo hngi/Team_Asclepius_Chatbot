@@ -16,64 +16,56 @@ class ChatBotController extends Controller {
     public function handle() {
         $botman = app('botman');
 
-        $botman->hears('hi|hello|hey',function($bot)
-        {
-            $reply="nice to hear from you, I was created by team asclepius
-                     you can ask me any question I am only a simple
-                      bot so don't make it hard";
-            $bot->reply($reply);
-        });
-
-        $botman->hears('.*team asclepius.*',function($bot)
-        {
-            $bot->reply('Team Asclepius is one of the teams in stage 3 of HNG Internship 6.0');
-        });
-
-        $botman->hears('Ok', function ($bot) {
-            $bot->reply('Glad I could be of help');
-        });
-
-        
-        $botman->hears('Why Am I Here', function ($bot) {
-            $bot->reply('You are here because of HNG 6.0 Internship');
-        });
-        $botman->hears('.*(hng.* internship).*',function($bot) //using regular expressions
-        {
-            $bot->reply("hng internship is a place to learn, meet new friends");
-            $bot->reply(" if you are lucky enough and are skilled enough, you can make");
-            $bot->reply(" you can make it to the final stages of the internship");
-            $bot->reply(" you can also win great things along the way.");
-        });
-
 
         $botman->hears('{message}', function($botman, $message) {
+            $message=strtolower($message); //so we can try to match only for when in lower case
 
-            if ($message == 'Are you real?') {
+            if(preg_match("/hello|hey/", $message,$match))
+            {
+                $reply="$match[0], nice to hear from you, I am Asclepiusbot and I was created by
+                     team asclepius you can ask me any question I am only a simple
+                      bot so don't make it hard";
+                $botman->reply($reply);
+            }
+            elseif (preg_match("/team asclepius/",$message))
+            {                 
+                $reply="Team Asclepius is one of the teams in stage 3 of HNG Internship, the
+                team members are all great, I hope they all make it to stage 4";
+                $botman->reply($reply);
+            }
+            elseif (preg_match("/hng.*internship/",$message,$match))
+            {
+                $botman->reply("hng internship is a place to learn, meet new friends");
+                $botman->reply(" if you are lucky enough and are skilled enough, you can make");
+                $botman->reply(" it to the final stages of the internship");
+                $botman->reply(" you can also win great things along the way.");                                
+            }
+            elseif ($message == 'are you real?') {
                 $this->welcome($botman);
-            } elseif ($message == 'What is your Name?') {
+            } elseif ($message == 'what is your name?') {
                 $this->sayName($botman);
-            } elseif ($message == 'How old are you?') {
+            } elseif ($message == 'how old are you?') {
                 $this->sayOld($botman);
-            } elseif ($message == 'Where do you live?') {
+            } elseif ($message == 'where do you live?') {
                 $this->sayLive($botman);
             } 
-            elseif ($message == 'How can you help me?') {
+            elseif ($message == 'how can you help me?') {
                 $this->sayHelp($botman);
             } 
             
-            elseif ($message == 'Which Languages do you speak?') {
+            elseif ($message == 'which languages do you speak?') {
                 $this->sayLang($botman);
             } 
             
-            elseif ($message == 'How are you?') {
+            elseif ($message == 'how are you?') {
                 $this->sayHow($botman);
             } 
             
-            elseif ($message == 'What time is it?') {
+            elseif ($message == 'what time is it?') {
                 $this->sayTime($botman);
             } 
             
-            elseif ($message == 'What is my age?') {
+            elseif ($message == 'what is my age?') {
                 $this->sayAge($botman);
             } 
             else {
@@ -110,7 +102,8 @@ class ChatBotController extends Controller {
 
     public function sayLive($botman) {
         $botman->types();
-        $botman->say('In your Computer', function($botman) {
+        $botman->say('In a strange land, filled with circuits and 
+            where everything is processed as either 1 or 0', function($botman) {
             
         });
     }
@@ -151,7 +144,8 @@ class ChatBotController extends Controller {
     
     public function fallBack($botman) {
         $botman->types();
-        $botman->say('Sorry, My Boss didnt teach me this.', function($botman) {
+        $botman->say('Sorry, I do not understand you, if you don\'t know what to ask,
+            you can ask me about me and what I do', function($botman) {
             
         });
     }
