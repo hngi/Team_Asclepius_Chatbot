@@ -13,35 +13,11 @@
 
 
             <div class="form-wrapper">
-                 
-             <div class="" aria-labelledby="navbarDropdown">
-                <a class="logoutdesign" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-             </div>
                 <br/>
                 <h1 class="lead">Hi {{Auth::user()->username}}</h1>
                <br/>
-                    <div class="flex-btn">
-                        <div class="login">
-                            <label for="login">
-                             <a href="#" onclick="botmanChatWidget.open();return false;">   <button type="submit" class="logindesign" class="btn-sumbmit">Chat With Our Bot</button></a>
-                                <i class="fas fa-chat"></i>
-                            </label>
-
-                        </div>
-          
-               
             </div>
-
         </div>
-    </div>
 @section('extra')
 
 

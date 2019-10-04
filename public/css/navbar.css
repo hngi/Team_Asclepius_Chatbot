@@ -1,0 +1,28 @@
+nav li {float:left;}
+
+nav li a
+{
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	color:#DDA0DD;
+}
+
+nav li a:hover
+{
+	background-color: #b666d2;
+	color:#FCFCFC;
+}
+
+nav ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: #301934;
+	width:100%;
+	position:sticky;
+	overflow: hidden;
+	top:0;
+
+}

@@ -1,0 +1,46 @@
+/* stylesheet for the help page */
+
+
+body
+{
+	margin:0;
+}
+
+.helpcontent
+{
+	margin-left:25%;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position:fixed;
+	overflow: auto;
+	width:24%;
+	height: 100%;
+	top:0;
+	background-color: #301934;
+}
+
+li a
+{
+	display: block;
+	text-decoration:none;
+	padding: 8px 25px;
+	color:#DDA0DD;
+}
+
+li a:hover
+{
+	background-color: #b666d2;
+	color:#FCFCFC;
+}
+
+.centerpos
+{
+	padding: 8px 25px;
+	font-weight:bold;
+	background-color:violet;
+}
