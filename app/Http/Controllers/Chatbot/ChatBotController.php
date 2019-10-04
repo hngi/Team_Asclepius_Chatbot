@@ -54,7 +54,7 @@ class ChatBotController extends Controller {
             } elseif ($message == 'how old are you?') {
                 $this->sayOld($botman);
             } elseif ($message == 'where do you live?') {
-                $this->sayLive($botman);
+                $this-asclepiusbot.herokuapp.com>sayLive($botman);
             } 
             elseif ($message == 'which languages do you speak?') {
                 $this->sayLang($botman);
@@ -142,7 +142,7 @@ class ChatBotController extends Controller {
     public function fallBack($botman) {
         $botman->types();
         $botman->say('Sorry, I do not understand you, if you don\'t know what to ask,
-            you can ask me about me and what I do', function($botman) {
+            you can check out this <a href="/help" target="_blank">help page </a> to know about me and what I do', function($botman) {
             
         });
     }
