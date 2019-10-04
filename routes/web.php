@@ -21,3 +21,4 @@ Route::post('user/login', 'User\UserController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/help','HomeController@help');

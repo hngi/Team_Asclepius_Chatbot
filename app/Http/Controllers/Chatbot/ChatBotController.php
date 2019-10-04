@@ -25,7 +25,9 @@ class ChatBotController extends Controller {
                 $reply="$match[0], nice to hear from you, I am Asclepiusbot and I was created by
                      team asclepius you can ask me any question I am only a simple
                       bot so don't make it hard";
+                $helpmessage="Don't know what to ask me, you can type in help! :-)";
                 $botman->reply($reply);
+                $botman->reply($helpmessage);
             }
             elseif (preg_match("/team asclepius/",$message))
             {                 
@@ -40,6 +42,11 @@ class ChatBotController extends Controller {
                 $botman->reply(" it to the final stages of the internship");
                 $botman->reply(" you can also win great things along the way.");                                
             }
+            elseif (preg_match("/help/",$message,$match))
+            {
+                $reply="hmmm! Someone needs help<br> Well lucky you I got you covered, follow below link to the<a href='/help' target='_blank'> help_page</a>";
+                $botman->reply($reply);
+            }
             elseif ($message == 'are you real?') {
                 $this->welcome($botman);
             } elseif ($message == 'what is your name?') {
@@ -49,10 +56,6 @@ class ChatBotController extends Controller {
             } elseif ($message == 'where do you live?') {
                 $this->sayLive($botman);
             } 
-            elseif ($message == 'how can you help me?') {
-                $this->sayHelp($botman);
-            } 
-            
             elseif ($message == 'which languages do you speak?') {
                 $this->sayLang($botman);
             } 
@@ -104,12 +107,6 @@ class ChatBotController extends Controller {
         $botman->types();
         $botman->say('In a strange land, filled with circuits and 
             where everything is processed as either 1 or 0', function($botman) {
-            
-        });
-    }
- public function sayHelp($botman) {
-        $botman->types();
-        $botman->say('Ask me any questions', function($botman) {
             
         });
     }
