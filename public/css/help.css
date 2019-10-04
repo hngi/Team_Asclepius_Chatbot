@@ -21,7 +21,7 @@ ul
 	width:24%;
 	height: 100%;
 	top:0;
-	background-color: #DDDDDD;
+	background-color: #301934;
 }
 
 li a
@@ -29,12 +29,13 @@ li a
 	display: block;
 	text-decoration:none;
 	padding: 8px 25px;
+	color:#DDA0DD;
 }
 
 li a:hover
 {
-	background-color: #DAA520;
-	color: #8B4513;
+	background-color: #b666d2;
+	color:#FCFCFC;
 }
 
 .centerpos

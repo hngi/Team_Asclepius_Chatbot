@@ -18,8 +18,7 @@
 					<li> <a href='#developers'> Developers </a> </li>
 					<li> <a href='#contribute'> How to contribute </a></li> 
 					<li> <a href='#about'> About the bot </a></li> 
-					<li> <a href='#tips'> Tips of Conversing with the bot </a> </li> 
-					<li> <a href='#'> Contact  </a> </li>
+					<li> <a href='/contact_us'> Contact  </a> </li>
 				</ul>
 			</nav>
 
@@ -31,7 +30,7 @@
 					<p>
 						unfortunately, I cannot start listing them all here, the page would get too long.
 						What I can tell you is that you can reach tem through their contact as shown int
-						the <a href="#">contact page</a>
+						the <a href="/contact_us">contact page</a>
 					</p>
 				</div>
 				<h3 id="contribute">How to Contribute</h3>
@@ -40,7 +39,7 @@
 						There are a features that the development team may have missed or may be bugs that you
 						may have found and probably the development team did not find.
 					</p>
-					<p>To contribute,you can <a href="#">contact</a> the development team</p>
+					<p>To contribute,you can <a href="/contact_us">contact</a> the development team</p>
 					<p>
 						If you do not feel like contacting them but you would still want to contribute. head over to
 						<a href="https://github.com/hngi/Team_Asclepius_Chatbot" target="_blank">github</a> and <b> <em>fork</em> </b> the <a href="https://github.com/hngi/Team_Asclepius_Chatbot" target="_blank"> repository.</a>
@@ -50,7 +49,7 @@
 
 					<p>
 						Not only other developers can contribute, even you users, if you find a bug, do not hesitate
-						to <a href="#">contact the development teamd </a>
+						to <a href="/contact_us">contact the development teamd </a>
 					</p>
 				</div>
 

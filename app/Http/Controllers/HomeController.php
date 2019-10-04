@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        //placed the middleware on the route for home
     }
 
     /**
@@ -29,5 +30,10 @@ class HomeController extends Controller
     public function help()
     {
         return view('help');
+    }
+
+    public function contactus()
+    {
+        return view('contact_us');
     }
 }

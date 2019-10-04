@@ -20,5 +20,12 @@ Route::post('user/register', 'User\UserController@register');
 Route::post('user/login', 'User\UserController@login');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/help','HomeController@help');
+Route::get('/contact_us','HomeController@contactus');
+Route::get('/logout',function()
+{
+	Auth::logout();
+	return redirect()->to('/home');
+});
+

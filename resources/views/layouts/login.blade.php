@@ -17,6 +17,7 @@
 
         <!-- Styles -->
         <link href="/css/login.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/navbar.css">
         <style>
             .toast {
                 opacity: 0.9!important;
@@ -25,8 +26,34 @@
     </head>
 
     <body>
+        @if(Auth::check())
+            <nav> 
+                <ul>
+                    <li> <a href="/home"> Homepage </a> </li>
+                    <li> <a href="/contact_us">Contactus </a> </li>
+                    <li> <a href="/help"> Help</a> </li>
+                    <li> 
+                        <a href="#" onclick="botmanChatWidget.open();return false;">Chat with bot
+                        </a>
+                    </li>
+                    <li style="position:fixed; right:0; background-color:red;">
+                        <a href="/logout">Log out </a>
+                    </li>
+                </ul>
+            </nav>
+        @else
+            <nav> 
+            <ul>
+                <li> <a href="/home"> Homepage </a> </li>
+                <li> <a href="/contact_us">Contactus </a> </li>
+                <li> <a href="/help"> Help</a> </li>
+                <li style="position:fixed; right:0; background-color:green;">
+                    <a href="/register">sign up</a>
+                </li>
+            </ul>
+        </nav>
+        @endif
         <div class="container" id="container">
-
             @yield('content')
             <div class="modal" style="display: none">
                 <div class="center">
