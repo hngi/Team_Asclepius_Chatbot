@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Bot Signup</title>
 
         <!-- Scripts -->
 
@@ -90,16 +90,15 @@ $('#register').submit(function (event) {
             if (data.status === 401) {
                 jQuery.each(data.message, function (key, value) {
                     var message = ('' + value + '');
-                    toastr.error(message, {timeOut: 50000});
+                    toastr.error(message, {timeOut: 100});
                 });
                 return false;
             }
             if (data.status === 200) {
                 var message = data.message;
-                toastr.options.onHidden = function () {
-                    window.location.href = "{{url('/home')}}";
-                };
-                toastr.success(message, {timeOut: 50000});
+               
+                toastr.success(message);
+                  window.location.href = "{{url('/home')}}";
                 return false;
             }
         }
