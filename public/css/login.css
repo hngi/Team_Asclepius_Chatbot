@@ -70,6 +70,16 @@ img {
     width: 100vw;
 }
 
+#forgot
+{
+    position:fixed;
+    bottom:350px;
+    right:150px;
+    text-decoration:none;
+    color:purple;
+
+}
+
 /*GRIDS START*/
 .inner-container.grid {
     display: grid;
