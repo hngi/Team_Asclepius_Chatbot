@@ -29,6 +29,7 @@
                                 <i class="fas fa-lock"></i>
 
                             </label>
+                            <a href="email" id="forgot">Forgot password?</a>
                         </div>
                     </div>
                     <div class="flex-btn">
@@ -36,8 +37,7 @@
                             <label for="login">
                                 <button type="submit" class="logindesign" class="btn-sumbmit">LOGIN</button>
                                 <i class="fas fa-sign-in-alt"></i>
-                            </label>
-
+                            </label> 
                         </div>
                 </form>
                 <div id="prompt">

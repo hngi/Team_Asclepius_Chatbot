@@ -23,6 +23,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/help','HomeController@help');
 Route::get('/contact_us','HomeController@contactus');
+Route::get('/email','HomeController@forgotpassword');
 Route::get('/logout',function()
 {
 	Auth::logout();
